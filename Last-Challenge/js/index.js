@@ -1,0 +1,63 @@
+//js para cambiar los colores del nav 
+
+$("li")
+  .mouseover(function () {
+    $(this).find(".drop-down").slideDown(300);
+    $(this).find(".accent").addClass("animate");
+    $(this).find(".item").css("color", "#0D0D0D");
+  })
+  .mouseleave(function () {
+    $(this).find(".drop-down").slideUp(300);
+    $(this).find(".accent").removeClass("animate");
+    $(this).find(".item").css("color", "#FFFFFF");
+  });
+
+
+
+
+
+  // js para la trnsicion de las imágenes
+let currentIndex = 0;
+
+document.querySelector('.prev-button').addEventListener('click', () => {
+    navigate(-1);
+});
+
+document.querySelector('.next-button').addEventListener('click', () => {
+    navigate(1);
+});
+
+function navigate(direction) {
+    const galleryContainer = document.querySelector('.gallery-container');
+    const totalImages = document.querySelectorAll('.gallery-item').length;
+    
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    const offset = -currentIndex * 100;
+    
+    galleryContainer.style.transform = `translateX(${offset}%)`;
+}
+
+//AUTOPLAY
+let autoplayInterval = null;
+
+function startAutoplay(interval) {
+    stopAutoplay();  // Detiene cualquier autoplay anterior para evitar múltiples intervalos.
+    autoplayInterval = setInterval(() => {
+        navigate(1);  // Navega a la siguiente imagen cada intervalo de tiempo.
+    }, interval);
+}
+
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+// Iniciar autoplay con un intervalo de 3 segundos.
+startAutoplay(3000);
+
+// Opcional: Detener autoplay cuando el usuario interactúa con los botones de navegación.
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', stopAutoplay);
+});
+
+
+
