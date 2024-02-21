@@ -5,17 +5,17 @@ function opa($nom) {
     setTimeout(function () {
       switch ($nom) {
         case "aprilia":
-          window.location.href = "/layouts/home_layout.html?marca=aprilia";
+          window.location.href = "layouts/home_layout.html?marca=aprilia";
           break;
         case "ducati":
-          window.location.href = "/layouts/home_layout.html?marca=ducati";
+          window.location.href = "layouts/home_layout.html?marca=ducati";
           break;
         case "motoguzzi":
-          window.location.href = "/layouts/home_layout.html?marca=motoguzzi";
+          window.location.href = "layouts/home_layout.html?marca=motoguzzi";
           break;
   
         case "mvagusta":
-          window.location.href = "/layouts/home_layout.html?marca=mvagusta";
+          window.location.href = "layouts/home_layout.html?marca=mvagusta";
           break;
         case "empresa":
           window.location.href = "/layouts/home_layout.html?marca=empresa";
