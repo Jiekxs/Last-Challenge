@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motographix - Concesionario Oficial</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-
     <nav id="NavSuperior">
         <section id="marcas">
-            <a href="../index.html"><img class="Logos Empresa" src="../Material_gráfico/Logos/Logo.png" alt="logo_Empresa"></a>
-            <a href="../gama.html?marca=aprilial"><img class="Logos " src="../Material_gráfico/Logos/Aprilia.png" alt="logo_Aprilia"></a>
-            <a href=""><img class="Logos " src="../Material_gráfico/Logos/Ducati.png" alt="logo_Ducati"></a>
-            <a href=""><img class="Logos " src="../Material_gráfico/Logos/Motoguzzi.png" alt="logo_Motoguzzi"></a>
-            <a href=""><img class="Logos " src="../Material_gráfico/Logos/MvAgusta.png" alt="logo_Mvagusta">
+            <a onclick="opa('index')"><img class="Logos Empresa" src="../Material_gráfico/Logos/Logo.png" alt="logo_Empresa"></a>
+            <a onclick="opa('aprilia')"><img class="Logos " src="../Material_gráfico/Logos/Aprilia.png" alt="logo_Aprilia"></a>
+            <a onclick="opa('ducati')"><img class="Logos " src="../Material_gráfico/Logos/Ducati.png" alt="logo_Ducati"></a>
+            <a onclick="opa('motoguzzi')"><img class="Logos " src="../Material_gráfico/Logos/Motoguzzi.png" alt="logo_Motoguzzi"></a>
+            <a onclick="opa('mvagusta')"><img class="Logos " src="../Material_gráfico/Logos/MvAgusta.png" alt="logo_Mvagusta">
             </a>
         </section>
 
@@ -25,19 +25,19 @@
                 <li><a class="item">GAMA<i class="fa fa-chevron-down"></i></a>
                     <span class="accent"></span>
                     <ul class="drop-down">
-                        <li><a href="../gama.html?marca=aprilia">APRILIA</a></li>
-                        <li><a href="#">DUCATI</a></li>
-                        <li><a href="#">MOTOGUZZI</a></li>
-                        <li><a href="#">MV AGUSTA</a></li>
+                        <li><a onclick="opa('aprilia')">APRILIA</a></li>
+                        <li><a onclick="opa('ducati')">DUCATI</a></li>
+                        <li><a onclick="opa('motoguzzi')">MOTOGUZZI</a></li>
+                        <li><a onclick="opa('mvagusta')">MV AGUSTA</a></li>
                     </ul>
                 </li>
                 <li><a  class="item">NOSOTROS <i class="fa fa-chevron-down"></i></a>
                     <span class="accent"></span>
                     <ul class="drop-down">
-                        <li><a href="#">EMPRESA</a></li>
-                        <li><a href="#">SERVICIOS</a></li>
-                        <li><a href="#">TALLER</a></li>
-                        <li><a href="#">CONTACTANOS</a></li>
+                        <li><a onclick="opa('empresa')">EMPRESA</a></li>
+                        <li><a onclick="opa('servicios')">SERVICIOS</a></li>
+                        <li><a onclick="opa('taller')">TALLER</a></li>
+                        <li><a onclick="opa('contacto')">CONTACTANOS</a></li>
                     </ul>
                 </li>
                 <li><a class="item">MI PERFIL <i class="fa fa-chevron-down"></i></a>
@@ -58,14 +58,14 @@
         <a href=""><img src="../Material_gráfico/iconos/direccion.png" alt=""></a>
     </aside>
 
-    <main>
+    <main id="main-content">
     </main>
 
     <footer>
         <section id="redes">
-            <img class="iconoFooter" src="../Material_gráfico/iconos/instagram.png" alt="logo_instagram">
-            <img class="iconoFooter" src="../Material_gráfico/iconos/twitter.png" alt="logo_twitter">
-            <img class="iconoFooter" src="../Material_gráfico/iconos/facebook.png" alt="logo_facebook">
+            <a href="https://about.instagram.com/es-la"><img class="iconoFooter" src="../Material_gráfico/iconos/instagram.png" alt="logo_instagram"></a>
+            <a href="https://twitter.com/?lang=es"><img class="iconoFooter" src="../Material_gráfico/iconos/twitter.png" alt="logo_twitter"></a>
+            <a href="https://www.facebook.com/?locale=es_ES"><img class="iconoFooter" src="../Material_gráfico/iconos/facebook.png" alt="logo_facebook"></a>
         </section>
 
         <section id="info">
@@ -76,5 +76,8 @@
         </section>
 
     </footer>
+    <script src="/js/desplegables.js"></script>
+    <script src="/js/cargarMain.js"></script>
+    <script src="/js/transiciónYredireccion.js"></script>
 </body>
 </html>

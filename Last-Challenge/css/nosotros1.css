@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'SharpTitulo';
+    src        : url('../SharpGrotesk-Book25.otf');
+}
+
+@font-face {
+    font-family: 'textoPlano';
+    src        : url('../SharpGrotesk-Medium20.otf');
+}
+
+
+main {
+    display: flex;
+    color  : #000000;
+}
+
+#izquierda {
+    width  : 50vw;
+    height : 85vh;
+    padding: 2vw;
+}
+
+#derecha {
+    width : 50vw;
+    height: 85vh;
+
+}
+
+#tituloEmpresa {
+    font-family   : SharpTitulo;
+    font-size     : 3vw;
+    text-transform: uppercase;
+}
+
+#subtituloEmpresa {
+    font-size     : 1vw;
+    font-family   : textoPlano;
+    letter-spacing: 0.1vw;
+    text-align    : justify;
+}
+
+#lista {
+    font-size      : 1vw;
+    font-family    : textoPlano;
+    letter-spacing : 0.1vw;
+    list-style-type: inherit;
+}
+
+#texto {
+    font-size     : 1vw;
+    font-family   : textoPlano;
+    letter-spacing: 0.1vw;
+    text-align    : justify;
+}
+
+#derecha img {
+    position: relative;
+    width   : 42vw;
+    border  : 1vh solid black;
+    top     : 10vh;
+    left    : vw;
+}
+
+
+
+/* CSS */
+.button-28 {
+    appearance         : none;
+    background-color   : #ffffff86;
+    border             : 2px solid #1A1A1A;
+    border-radius      : 15px;
+    box-sizing         : border-box;
+    color              : #000000;
+    cursor             : pointer;
+    display            : inline-block;
+    font-family        : SharpTitulo;
+    text-transform: uppercase;
+    font-size          : 16px;
+    font-weight        : 600;
+    line-height        : normal;
+    margin             : 0;
+    min-height         : 60px;
+    min-width          : 0;
+    outline            : none;
+    padding            : 16px 24px;
+    text-align         : center;
+    text-decoration    : none;
+    transition         : all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select        : none;
+    -webkit-user-select: none;
+    touch-action       : manipulation;
+    width              : 100%;
+    will-change        : transform;
+}
+
+.button-28:disabled {
+    pointer-events: none;
+}
+
+.button-28:hover {
+    color           : #fff;
+    background-color: #1A1A1A;
+    box-shadow      : rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform       : translateY(-2px);
+}
+
+.button-28:active {
+    box-shadow: none;
+    transform : translateY(0);
+}
