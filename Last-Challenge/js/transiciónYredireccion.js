@@ -5,7 +5,7 @@ function opa($nom) {
     setTimeout(function () {
       switch ($nom) {
         case "aprilia":
-          window.location.href = "layouts/home_layout.html?marca=aprilia";
+          window.location.href = "../layouts/home_layout.html?marca=aprilia";
           break;
         case "ducati":
           window.location.href = "layouts/home_layout.html?marca=ducati";
